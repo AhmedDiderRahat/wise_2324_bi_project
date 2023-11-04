@@ -1,0 +1,5 @@
+CREATE OR REPLACE TABLE AOL_SCHEMA.WC_SEARCH_TERMS (
+    TERM VARCHAR(512) NOT NULL
+);
+IMPORT INTO AOL_SCHEMA.WC_SEARCH_TERMS
+FROM LOCAL CSV FILE 'D:\Programmierung\wise_2324_bi_project\etl\world_cup_search_terms\search_terms.csv';
