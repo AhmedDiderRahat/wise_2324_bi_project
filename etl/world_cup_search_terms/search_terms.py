@@ -101,7 +101,7 @@ if __name__ == '__main__':
         data_dict = json.loads(file.read())
         
     search_terms = create_search_terms(data_dict, languages=LANGUAGES, options=OPTIONS)
-    with open(OUTPUT_SEARCH_TERMS, mode='w') as file:
-        writer = csv.writer(file)
+    with open(OUTPUT_SEARCH_TERMS, mode='w', newline='\n') as file:
+        writer = csv.writer(file, doublequote=True)
         for term in search_terms:  
             writer.writerow([term])
