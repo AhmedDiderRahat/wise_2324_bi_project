@@ -48,19 +48,19 @@ def _apply_typos(terms: list[str], insert_letter=False,
     terms_with_typos = set()
     for term in terms:
         words = term.lower().split(" ")
-        prev_terms_set = {""}
-        for word in words:
-            curr_terms_set = set()
+        for i, word in enumerate(words):
             for func in typo_funcs:
                 typo_words = func(word) + [word]
-                for prev_term in prev_terms_set:
-                    curr_terms_set.update([prev_term + (" " if prev_term != "" else "") + typo_word for typo_word in typo_words])
-            
-            prev_terms_set = curr_terms_set
-            
-        terms_with_typos.update(prev_terms_set)
+                terms_with_typos.update([_words_list_to_term(words[:i]) \
+                                         + (" " if i > 0 else "") \
+                                         + typo_word \
+                                         + (" " if i < len(words) - 1 else "") \
+                                         + _words_list_to_term(words[i + 1:]) for typo_word in typo_words])
         
     return terms_with_typos
+
+def _words_list_to_term(words: list) -> str:
+    return ' '.join(words)
 
 
 def create_search_terms(language_dict: dict, languages: set, options: set = {}) -> set:
@@ -94,7 +94,7 @@ if __name__ == '__main__':
         'insert_letter': False,
         'missing_letter': True,
         'reverse_letter': True,
-        'wrong_letter': False
+        'wrong_letter': True
     }
     
     with open(SEARCH_TERM_LANGUAGES_FILE, mode='r') as file:
