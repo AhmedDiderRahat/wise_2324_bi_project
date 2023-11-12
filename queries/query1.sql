@@ -1,4 +1,4 @@
--- select how many times users searched for world cup related queries, which doesnt include players
+-- select the number of times users searched for wc related queries (excluding those related to players).
 WITH
     SINGLE_QUERIES AS (
     	SELECT
