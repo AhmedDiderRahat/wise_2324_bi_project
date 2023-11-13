@@ -10,7 +10,7 @@ For the Project of BI Course during Winter Semester 2023-2024
 
 ## Queries
 1. How have the searches for the World Cup changed over time? Was there an increase over the months to the start?
-2. What are the top 10 most clicked search results for the World Cup, and how frequently are they clicked?
-3. Who are the top 10 searched players, and how many goals did they score? Is a player's search popularity related to their goals?
+2. What are the most clicked search results for the World Cup, and how frequently are they clicked?
+3. Who are the most searched players, and how many goals did they score? Is a player's search popularity related to their goals?
 4. What were the other search terms and URLs that users looked for on the same day?
 5. QUERY5
