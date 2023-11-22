@@ -1,0 +1,9 @@
+-- GOAL & CARD
+
+SELECT iq.MATCH_ID, iq.total_card, iq.number_of_goal 
+FROM (
+	SELECT mf.MATCH_ID, SUM(PMD.RED_CARDS)+SUM(PMD.YELLOW_CARDS) AS total_card, SUM(pmd.GOALS) AS number_of_goal
+		FROM AOL_SCHEMA.MATCH_FACTS mf
+		JOIN AOL_SCHEMA.PLAYER_MATCHDIM pmd ON pmd.ID = mf.PLAYER_MATCH_ID
+GROUP BY 1) AS iq
+ORDER BY 1
