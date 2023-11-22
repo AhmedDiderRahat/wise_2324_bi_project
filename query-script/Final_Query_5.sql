@@ -10,8 +10,6 @@ WHERE u.THISDOMAIN IS NOT NULL
 GROUP BY u.THISDOMAIN, u.URL
 ORDER BY url_rank, u.THISDOMAIN;
 
-
-
 -- select highest clicked domains and urls
 -- parition domains and normal urls + domains into two different groups
 SELECT u.URL, u.THISDOMAIN,
