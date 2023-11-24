@@ -10,16 +10,12 @@ For the Project of BI Course during Winter Semester 2023-2024
 
 ## ETL
 ### External Datasources
-| Link                | Name |
-|-|-|
-| [Kaggle](https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset/data)  | Fifa World Cup 2006 Country Statistics 
-  | 
-| [Kaggle](https://www.kaggle.com/datasets/abecklas/fifa-world-cup)  | Fifa World Cup Player Statistics
-  | 
-| [Github](https://github.com/mneedham/neo4j-worldcup/blob/master/data/import/matches.csv)  | Fifa World Cup Match Statistics
-  |
-| [Kaggle](https://www.kaggle.com/datasets/abecklas/fifa-world-cup)  | Fifa World Cup Match Statistics
-  |
+| Link | Name |
+| - | - |
+| [Kaggle](https://www.kaggle.com/datasets/iamsouravbanerjee/fifa-football-world-cup-dataset/data)  | Fifa World Cup 2006 Country Statistics | 
+| [Kaggle](https://www.kaggle.com/datasets/abecklas/fifa-world-cup)  | Fifa World Cup Player Statistics | 
+| [Github](https://github.com/mneedham/neo4j-worldcup/blob/master/data/import/matches.csv)  | Fifa World Cup Match Statistics |
+| [Kaggle](https://www.kaggle.com/datasets/abecklas/fifa-world-cup)  | Fifa World Cup Match Statistics |
 
 ### Data Transformation
 In our data transformation process, we first selected certain terms, which we then modified using various misspelling methods. We checked if these terms appeared in a query, if they did, we used that query. This is how we constructed our QUERY_DIMS.
